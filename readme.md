@@ -441,7 +441,9 @@ Distribute load evenly across instances in different zones
     - Disabled by default 
     - Not charges of inter AZ 
   - ALB
-    - Always on (Can't be disabled) 
+    - Always on
+      + Can't be disabled at ALB 
+      + can turn off at target group instances
     - No charges for inter AZ 
   - NLB
     - Disabled by default 
