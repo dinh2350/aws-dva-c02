@@ -449,6 +449,9 @@ Distribute load evenly across instances in different zones
     - Disabled by default 
     - Pay charges for inter AZ
 ### SSL/TLS
+- An SSL Certificate allows traffic between your clients and your load balancer to be encrypted in transit (in-flight encryption)
+  - SSL refers to Secure Sockets Layer, used to encrypt connections
+  - TLS refers to Transport Layer Security, which is a newer version
 - SNI: Server Name Indication 
   - Solves the problem of loading multiple SSL onto one web server 
 - CLB: one SSL per CLB 
@@ -472,12 +475,15 @@ Distribute load evenly across instances in different zones
 - Separate public / private traffic 
 ## 🟪 ASG: Auto Scaling Group
 ### Attributes
-- Launch configuration 
+- launch template (older "Launch configuration" are deprecated) 
   - AMI + Instance Type 
   - EC2 User Data 
   - EBS Volumes 
   - Security Groups 
-  - SSH Key Pair 
+  - SSH Key Pair
+  - IAM Roles for EC2
+  - Network + Subnets Information
+  - Load Blancer Information
 - Min Size / Max Size / Initial Capacity (_Target Capacity_)
 - Network + Subnets Information 
 - Scaling Policies 
